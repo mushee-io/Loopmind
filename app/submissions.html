@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LoopMind Submission Queue</title>
+  <meta name="description" content="LoopMind submission queue and review states." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grid-lines"></div>
+    
+    <header class="topbar container">
+      <a class="brand" href="/index.html">
+        <img class="brand-logo" src="/assets/logo-orange.png" alt="LoopMind logo" />
+        <div class="brand-mark">
+          <span class="brand-title">Mushee LoopMind</span>
+          <span class="brand-sub">Memory for human–AI intelligence</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Prelanding</a>
+        <a href="/landing/memory-architecture/index.html">Landings</a>
+        <a href="/app/index.html">App</a>
+        <a href="/app/demos.html">Demos</a>
+        
+        <a class="cta" href="/app/mainnet.html">Open main app</a>
+      </nav>
+    </header>
+    
+    <main class="container section">
+      <section class="hero-dashboard">
+        <article class="glass-panel panel-pad">
+          <div class="kicker"><span class="dot"></span> submitted • review • approved</div>
+          <h1 style="font-size:clamp(2.5rem,5vw,4rem);">A queue that makes the product look operational.</h1>
+          <p class="lead">Use this to show that LoopMind has real workflows: submission, review, trust scoring, approvals, and shipment into the main app.</p>
+          <div class="button-row">
+            <button class="button" data-demo-id="7">Run approval queue</button>
+            <button class="button alt" data-demo-id="22">Submit bundle</button>
+          </div>
+        </article>
+        <article class="glass-panel panel-pad">
+          <div class="small-chip">Queue board</div>
+          <div id="submission-table"></div>
+        </article>
+      </section>
+      <section class="card-grid-3">
+        <article class="info-card"><h3>Submitted</h3><p>Objects enter the queue with tags, urgency, and owner trails.</p></article>
+        <article class="info-card"><h3>Reviewing</h3><p>Approvers inspect trust ladders, source paths, and policy fit.</p></article>
+        <article class="info-card"><h3>Approved</h3><p>Ready outputs can be promoted to reusable intelligence or product views.</p></article>
+      </section>
+      <footer class="footer">
+        <span>Submission engine • review rail • operational look</span>
+        <a href="/app/index.html">Back to app hub</a>
+      </footer>
+    </main>
+  </div>
+  <div class="modal" id="demo-modal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <div class="small-chip" id="modal-score">94% trust</div>
+          <h3 id="modal-title">Demo</h3>
+          <p id="modal-desc" class="caption"></p>
+        </div>
+        <button class="close-button" id="close-modal">✕</button>
+      </div>
+      <div class="timeline" id="modal-timeline"></div>
+    </div>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

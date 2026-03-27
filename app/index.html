@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LoopMind App Hub</title>
+  <meta name="description" content="LoopMind app shell with dashboard, toggles, demos, and submission queues." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grid-lines"></div>
+    
+    <header class="topbar container">
+      <a class="brand" href="/index.html">
+        <img class="brand-logo" src="/assets/logo-orange.png" alt="LoopMind logo" />
+        <div class="brand-mark">
+          <span class="brand-title">Mushee LoopMind</span>
+          <span class="brand-sub">Memory for human–AI intelligence</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Prelanding</a>
+        <a href="/landing/memory-architecture/index.html">Landings</a>
+        <a href="/app/index.html">App</a>
+        <a href="/app/demos.html">Demos</a>
+        
+        <a class="cta" href="/app/mainnet.html">Open main app</a>
+      </nav>
+    </header>
+    
+    <main class="container section">
+      <div class="dashboard-shell">
+        <aside class="sidebar">
+          <div class="small-chip">Main app shell</div>
+          <h3>LoopMind control rail</h3>
+          <p class="caption">Toggle the app feel on the left, then use the cards on the right as working product demos.</p>
+          <div class="menu">
+            <a href="/app/index.html">Overview</a>
+            <a href="/app/demos.html">Demo grid</a>
+            <a href="/app/analytics.html">Analytics</a>
+            <a href="/app/agents.html">Agent studio</a>
+            <a href="/app/submissions.html">Submissions</a>
+            <a href="/app/mainnet.html">Mainnet access</a>
+          </div>
+          <div class="switches">
+            <div class="switch"><span>Trust layer</span><div class="toggle active"></div></div>
+            <div class="switch"><span>Replay engine</span><div class="toggle active"></div></div>
+            <div class="switch"><span>Subspace sync</span><div class="toggle"></div></div>
+            <div class="switch"><span>Policy guardrails</span><div class="toggle active"></div></div>
+            <div class="switch"><span>Board mode</span><div class="toggle"></div></div>
+          </div>
+        </aside>
+        <div class="main-column">
+          <section class="hero-dashboard">
+            <article class="glass-panel panel-pad">
+              <div class="kicker"><span class="dot"></span> LoopMind app hub</div>
+              <h1 style="font-size:clamp(2.6rem,5vw,4.5rem);">A premium dashboard with working demo behaviour.</h1>
+              <p class="lead">This is the main app shell. It contains dense stats, control toggles, live bars, submission rails, and a full interactive demo grid.</p>
+              <div class="button-row">
+                <button class="button" id="run-all-demos">Run suite</button>
+                <a class="button alt" href="/app/demos.html">Open all demos</a>
+              </div>
+              <div class="kpi-grid" style="margin-top:18px;">
+                <div class="kpi-card"><strong>24</strong><span>working demos</span></div>
+                <div class="kpi-card"><strong>12</strong><span>landing routes</span></div>
+                <div class="kpi-card"><strong>5</strong><span>workspace rails</span></div>
+                <div class="kpi-card"><strong>98%</strong><span>peak trust score</span></div>
+              </div>
+            </article>
+            <article class="glass-panel panel-pad">
+              <div class="small-chip">Performance bars</div>
+              <h3>Live system health</h3>
+              <div id="performance-bars" class="progress-wrap"></div>
+            </article>
+          </section>
+
+          <section class="card-grid-2">
+            <article class="table-card">
+              <div class="small-chip">Submitted</div>
+              <h3>Submission queue</h3>
+              <p>Memory packs, identity capsules, and main app assets moving through review.</p>
+              <div id="submission-table"></div>
+            </article>
+            <article class="table-card">
+              <div class="small-chip">Runtime log</div>
+              <h3>Live demo console</h3>
+              <p>Each demo run writes into this log so the dashboard feels alive while you present it.</p>
+              <div class="log-box"><pre id="demo-log">LoopMind ready.
+Click any demo to start a workflow.</pre></div>
+            </article>
+          </section>
+
+          <section>
+            <div class="section-head">
+              <div>
+                <h2 class="section-title">Interactive demo cards</h2>
+                <p class="section-copy">Each demo card opens a mini execution timeline. The cards are not just visual. They react, update the console, and simulate a product flow.</p>
+              </div>
+              <a class="pill-link" href="/app/demos.html">See all 24</a>
+            </div>
+            <div class="demo-grid" id="mini-demo-grid"></div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>Main app shell • dashboard toggles • submitted queues • live bars</span>
+        <a href="/index.html">Back to prelanding</a>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal" id="demo-modal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <div class="small-chip" id="modal-score">94% trust</div>
+          <h3 id="modal-title">Demo</h3>
+          <p id="modal-desc" class="caption"></p>
+        </div>
+        <button class="close-button" id="close-modal">✕</button>
+      </div>
+      <div class="timeline" id="modal-timeline"></div>
+    </div>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

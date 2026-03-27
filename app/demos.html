@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LoopMind Demo Grid</title>
+  <meta name="description" content="Twenty-four interactive LoopMind demo modules." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grid-lines"></div>
+    
+    <header class="topbar container">
+      <a class="brand" href="/index.html">
+        <img class="brand-logo" src="/assets/logo-orange.png" alt="LoopMind logo" />
+        <div class="brand-mark">
+          <span class="brand-title">Mushee LoopMind</span>
+          <span class="brand-sub">Memory for human–AI intelligence</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Prelanding</a>
+        <a href="/landing/memory-architecture/index.html">Landings</a>
+        <a href="/app/index.html">App</a>
+        <a href="/app/demos.html">Demos</a>
+        
+        <a class="cta" href="/app/mainnet.html">Open main app</a>
+      </nav>
+    </header>
+    
+    <main class="container section">
+      <section class="hero-dashboard">
+        <article class="glass-panel panel-pad">
+          <div class="kicker"><span class="dot"></span> 24 working demo modules</div>
+          <h1 style="font-size:clamp(2.5rem,5vw,4.2rem);">Run the full LoopMind suite.</h1>
+          <p class="lead">Use these cards to simulate onboarding, capture, verification, retrieval, policy changes, submissions, agents, and snapshots. Each run opens its own execution timeline and updates the console.</p>
+          <div class="button-row">
+            <button class="button" id="run-all-demos">Run batch suite</button>
+            <a class="button alt" href="/app/index.html">Back to hub</a>
+          </div>
+        </article>
+        <article class="glass-panel panel-pad">
+          <div class="small-chip">Console</div>
+          <div class="log-box"><pre id="demo-log">Demo grid ready.
+Select a card to begin.</pre></div>
+        </article>
+      </section>
+      <section>
+        <div class="demo-grid" id="demo-grid"></div>
+      </section>
+      <footer class="footer">
+        <span>LoopMind demo grid • 24 modules</span>
+        <a href="/app/index.html">Back to app hub</a>
+      </footer>
+    </main>
+  </div>
+  <div class="modal" id="demo-modal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <div class="small-chip" id="modal-score">94% trust</div>
+          <h3 id="modal-title">Demo</h3>
+          <p id="modal-desc" class="caption"></p>
+        </div>
+        <button class="close-button" id="close-modal">✕</button>
+      </div>
+      <div class="timeline" id="modal-timeline"></div>
+    </div>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

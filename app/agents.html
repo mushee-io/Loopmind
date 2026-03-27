@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LoopMind Agent Studio</title>
+  <meta name="description" content="LoopMind agent studio page." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grid-lines"></div>
+    
+    <header class="topbar container">
+      <a class="brand" href="/index.html">
+        <img class="brand-logo" src="/assets/logo-orange.png" alt="LoopMind logo" />
+        <div class="brand-mark">
+          <span class="brand-title">Mushee LoopMind</span>
+          <span class="brand-sub">Memory for human–AI intelligence</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Prelanding</a>
+        <a href="/landing/memory-architecture/index.html">Landings</a>
+        <a href="/app/index.html">App</a>
+        <a href="/app/demos.html">Demos</a>
+        
+        <a class="cta" href="/app/mainnet.html">Open main app</a>
+      </nav>
+    </header>
+    
+    <main class="container section">
+      <section class="hero-dashboard">
+        <article class="glass-panel panel-pad">
+          <div class="kicker"><span class="dot"></span> agent studio</div>
+          <h1 style="font-size:clamp(2.5rem,5vw,4rem);">Agents that inherit memory and controls.</h1>
+          <p class="lead">Show Launch, Route, Approve, and Replay in one place. This page is built for pitching LoopMind as a serious AI platform, not just a concept page.</p>
+          <div class="button-row">
+            <button class="button" data-demo-id="2">Launch agent demo</button>
+            <button class="button alt" data-demo-id="23">Run agent pairing</button>
+          </div>
+        </article>
+        <article class="glass-panel panel-pad">
+          <div class="small-chip">Agent lineup</div>
+          <div class="card-grid-2">
+            <div class="kpi-card"><strong>Research</strong><span>pattern extraction agent</span></div>
+            <div class="kpi-card"><strong>Board</strong><span>executive summary agent</span></div>
+            <div class="kpi-card"><strong>Ops</strong><span>submission and review agent</span></div>
+            <div class="kpi-card"><strong>Guard</strong><span>policy and trust agent</span></div>
+          </div>
+        </article>
+      </section>
+      <section>
+        <div class="demo-grid" id="mini-demo-grid"></div>
+      </section>
+      <footer class="footer">
+        <span>Agent studio • launch and pair agents</span>
+        <a href="/app/index.html">Back to app hub</a>
+      </footer>
+    </main>
+  </div>
+  <div class="modal" id="demo-modal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <div class="small-chip" id="modal-score">94% trust</div>
+          <h3 id="modal-title">Demo</h3>
+          <p id="modal-desc" class="caption"></p>
+        </div>
+        <button class="close-button" id="close-modal">✕</button>
+      </div>
+      <div class="timeline" id="modal-timeline"></div>
+    </div>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
